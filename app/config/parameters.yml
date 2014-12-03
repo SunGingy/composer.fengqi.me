@@ -1,6 +1,6 @@
 parameters:
     # this secret should be changed to something unique and random if possible
-    secret:         ThisTokenIsNotSoSecret-Change-It
+    secret:         vFjPLDTPJTGcB2dJvFjPLDTPJTGcB2dJ
 
     # http or https depending on your hosting setup
     toran_scheme:   http
