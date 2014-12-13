@@ -23,14 +23,14 @@ use Symfony\Component\Form\FormError;
 
 class RepoController extends Controller
 {
-    public function indexAction()
+    /*public function indexAction()
     {
         return $this->render('ToranProxyBundle:Repo:index.html.twig', array(
             'repos' => $this->get('config')->getRepositories()
         ));
-    }
+    }*/
 
-    public function createAction(Request $req)
+    /*public function createAction(Request $req)
     {
         $config = $this->get('config');
         $repo = new Repository;
@@ -46,9 +46,9 @@ class RepoController extends Controller
         }
 
         return $this->render('ToranProxyBundle:Repo:create.html.twig', array('form' => $form->createView()));
-    }
+    }*/
 
-    public function editAction(Request $req, $id, $digest)
+    /*public function editAction(Request $req, $id, $digest)
     {
         $config = $this->get('config');
         $repo = $config->getRepository($id, $digest);
@@ -64,9 +64,9 @@ class RepoController extends Controller
         }
 
         return $this->render('ToranProxyBundle:Repo:edit.html.twig', array('form' => $form->createView()));
-    }
+    }*/
 
-    public function deleteAction(Request $req, $id, $digest)
+    /*public function deleteAction(Request $req, $id, $digest)
     {
         $config = $this->get('config');
 
@@ -80,7 +80,7 @@ class RepoController extends Controller
         $config->save();
 
         return $this->redirect($this->generateUrl('toran_proxy_repo_index'));
-    }
+    }*/
 
     public function hookAction(Request $req)
     {

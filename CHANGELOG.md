@@ -1,3 +1,8 @@
+### 1.1.5 (2014-12-11)
+
+  * Fixed issues with http proxy handling
+  * Fixed minor setup and update issues
+
 ### 1.1.4 (2014-09-19)
 
   * Fixed handling of private packages with no dist URL

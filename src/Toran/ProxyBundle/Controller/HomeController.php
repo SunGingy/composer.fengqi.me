@@ -29,6 +29,147 @@ class HomeController extends Controller
         return $this->render('ToranProxyBundle:Home:index.html.twig', array('page' => 'home'));
     }
 
+    /*public function setupAction(Request $req)
+    {
+        $builder = $this->createConfigForm($req);
+        $builder->add('Install', 'submit');
+
+        $form = $builder->getForm();
+
+        if ($req->getMethod() === 'POST') {
+            $form->bind($req);
+
+            $data = $form->getData();
+            $config = $this->get('config');
+
+            $satis = array();
+            if (!empty($data['satis_conf'])) {
+                list($satis, $err) = $this->decodeJson($data['satis_conf']);
+                if ($err) {
+                    $form->addError(new FormError($err));
+                }
+            }
+
+            if (!count($form->getErrors())) {
+                $this->validateLicense($form);
+                $this->processConfigForm($form, $config);
+            }
+
+            if (!count($form->getErrors())) {
+                if (isset($satis['repositories'])) {
+                    foreach ($satis['repositories'] as $repo) {
+                        $config->addRepository(Repository::fromArray($repo, 0));
+                    }
+                }
+
+                try {
+                    $config->save();
+
+                    return $this->redirect($this->generateUrl('post_install'));
+                } catch (\Exception $e) {
+                    $form->addError(new FormError($e->getMessage()));
+                }
+            }
+        }
+
+        return $this->render('ToranProxyBundle:Home:install.html.twig', array('form' => $form->createView()));
+    }*/
+
+    /*public function postInstallAction()
+    {
+        return $this->render('ToranProxyBundle:Home:post_install.html.twig', array(
+            'base_path' => dirname(realpath($this->container->getParameter('kernel.root_dir')))
+        ));
+    }*/
+
+    /*public function docsAction($page)
+    {
+        $parsedown = new \Parsedown();
+        $docDir = $this->container->getParameter('kernel.root_dir').'/../doc/';
+
+        if ($page === 'faq') {
+            $faqs = glob($docDir.'faq/*.md');
+            $contents = '';
+            foreach ($faqs as $faq) {
+                $contents .= "\n\n".file_get_contents($faq);
+            }
+        } else {
+            $file = $docDir.$page;
+            if (!file_exists($file)) {
+                throw new NotFoundHttpException();
+            }
+            $contents = file_get_contents($file);
+        }
+
+        $contents = preg_replace('{^#}m', '##', $contents);
+        $contents = str_replace('http://toran.example.com/', $this->generateUrl('home', array(), true), $contents);
+        $contents = $parsedown->text($contents);
+
+        if ($page === 'faq') {
+            $contents = str_replace('<h2>', '</div><div class="faq-entry"><h2>', $contents) . '</div>';
+            $contents = substr($contents, 6);
+        }
+
+        return $this->render('ToranProxyBundle:Home:docs.html.twig', array(
+            'content' => $contents,
+            'page' => 'docs',
+            'doc_page' => $page,
+        ));
+    }*/
+
+    /*public function settingsAction(Request $req)
+    {
+        $config = $this->get('config');
+        $builder = $this->createConfigForm($req, array(
+            'packagist_sync' => $config->get('packagist_sync'),
+            'dist_sync_mode' => $config->get('dist_sync_mode'),
+            'git_prefix' => $config->get('git_prefix'),
+            'git_path' => $config->get('git_path'),
+            'license' => $config->get('license'),
+            'license_personal' => $config->get('license_personal'),
+        ));
+
+        $builder->add('Save', 'submit');
+
+        $form = $builder->getForm();
+        if ($req->getMethod() === 'POST') {
+            $form->bind($req);
+            $data = $form->getData();
+
+            $satis = array();
+            if (!empty($data['satis_conf'])) {
+                list($satis, $err) = $this->decodeJson($data['satis_conf']);
+                if ($err) {
+                    $form->addError(new FormError($err));
+                }
+            }
+
+            if (!count($form->getErrors())) {
+                $this->validateLicense($form);
+                $this->processConfigForm($form, $config);
+            }
+
+            if (!count($form->getErrors())) {
+                if (isset($satis['repositories'])) {
+                    foreach ($satis['repositories'] as $repoConfig) {
+                        foreach ($config->getRepositories() as $repoB) {
+                            if ($repoConfig == $repoB->config) {
+                                continue 2;
+                            }
+                        }
+                        $config->addRepository(Repository::fromArray($repoConfig, 0));
+                    }
+                }
+
+                $config->save();
+
+                return $this->redirect($this->generateUrl('home'));
+            }
+        }
+
+        return $this->render('ToranProxyBundle:Home:settings.html.twig', array('form' => $form->createView(), 'page' => 'settings'));
+    }*/
+
     protected function decodeJson($json)
     {
         $data = $err = null;

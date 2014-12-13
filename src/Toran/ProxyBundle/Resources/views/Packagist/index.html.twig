@@ -13,12 +13,10 @@
             <li>
                 <span class="name">{{ package }}</span>
                 <span class="opts">
-                    <a href="https://packagist.org/packages/{{ package }}">view on packagist</a>
+                    <a href="https://packagist.org/packages/{{ package }}" target="_blank">view on packagist</a>
                 </span>
             </li>
         {% endfor %}
         </ul>
-
-        <a class="button" href="{{ path('toran_proxy_packagist_add') }}">Add Package</a>
     {% endif %}
 {% endblock %}

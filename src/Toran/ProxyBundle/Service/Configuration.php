@@ -143,7 +143,12 @@ class Configuration
             $config['packagist_packages'] = array_unique($config['packagist_packages']);
         }
 
-        file_put_contents($this->file, Yaml::dump($config));
+        if (!file_put_contents($this->file, Yaml::dump($config))) {
+            if (!is_writable($this->file)) {
+                throw new \RuntimeException('Unable to write the config into ' . $this->file . ' (permissions are incorrect)');
+            }
+            throw new \RuntimeException('Unable to write the config into ' . $this->file);
+        }
         $this->dirty = false;
     }
 

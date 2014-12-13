@@ -8,7 +8,7 @@
         <h2>Installation</h2>
         <p>Welcome to Toran Proxy. This is a friendly reminder that this is proprietary software whose goal is to support the open-source development of Composer and finance the hosting of packagist.org. If you did not <a href="http://toranproxy.com">buy a license</a>, I can not technically stop you from using the software, but it would be a lot nicer if you did.</p>
 
-        <form class="install-form" action="" method="POST">
+        {{ form_start(form, {attr: {class: "install-form"}}) }}
             {{ form_errors(form) }}
 
             <h3>License</h3>
@@ -42,6 +42,6 @@
 
                 {{ form_rest(form) }}
             </div>
-        </form>
+        {{ form_end(form) }}
     </section>
 {% endblock %}

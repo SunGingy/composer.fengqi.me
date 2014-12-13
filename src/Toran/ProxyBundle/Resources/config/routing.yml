@@ -2,6 +2,22 @@ home:
     pattern:  /
     defaults: { _controller: ToranProxyBundle:Home:index, _format: html }
 
+setup:
+    pattern:  /setup
+    defaults: { _controller: ToranProxyBundle:Home:setup, _format: html }
+
+docs:
+    pattern:  /docs/{page}
+    defaults: { _controller: ToranProxyBundle:Home:docs, _format: html }
+
+post_install:
+    pattern:  /post-install
+    defaults: { _controller: ToranProxyBundle:Home:postInstall, _format: html }
+
+settings:
+    pattern:  /settings
+    defaults: { _controller: ToranProxyBundle:Home:settings, _format: html }
+
 toran_proxy_repo_index:
     pattern:  /repositories/
     defaults: { _controller: ToranProxyBundle:Repo:index, _format: html }
@@ -22,6 +38,22 @@ toran_proxy_repo_delete:
     defaults: { _controller: ToranProxyBundle:Repo:delete, _format: html }
     methods: DELETE
 
+toran_proxy_packagist_index:
+    pattern:  /packagist/
+    defaults: { _controller: ToranProxyBundle:Packagist:index, _format: html }
+    methods: GET
+
+toran_proxy_packagist_add:
+    pattern:  /packagist/add
+    defaults: { _controller: ToranProxyBundle:Packagist:add, _format: html }
+    methods: GET|POST
+
+toran_proxy_packagist_delete:
+    pattern:  /packagist/{package}
+    defaults: { _controller: ToranProxyBundle:Packagist:delete, _format: html }
+    methods: DELETE
+    requirements:
+        package: '[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+'
 
 toran_proxy_providers:
     pattern:  /repo/{repo}/p/{filename}

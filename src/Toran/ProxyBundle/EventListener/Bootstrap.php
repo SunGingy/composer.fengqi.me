@@ -14,6 +14,9 @@ namespace Toran\ProxyBundle\EventListener;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Twig_Environment;
 use Toran\ProxyBundle\Service\Util;
+use Composer\Util\RemoteFilesystem;
+use Composer\IO\NullIO;
+use Composer\Factory;
 
 class Bootstrap
 {
@@ -51,8 +54,16 @@ class Bootstrap
 
         $product = $this->util->getProductName();
         if ($fetch) {
-            $version = @file_get_contents('https://toranproxy.com/version?product='.$product) ?: $this->currentVersion;
-            file_put_contents($latestVersionCache, date('Y-m-d H:i:s', time() + 86400).'|'.$version);
+            $io = new NullIO();
+            $composerConfig = Factory::createConfig();
+            $io->loadConfiguration($composerConfig);
+            $rfs = new RemoteFilesystem($io, $composerConfig);
+
+            try {
+                $version = $rfs->getContents('toranproxy.com', 'https://toranproxy.com/version?product='.$product, false) ?: $this->currentVersion;
+                file_put_contents($latestVersionCache, date('Y-m-d H:i:s', time() + 86400).'|'.$version);
+            } catch (\Exception $e) {
+            }
         }
 
         $this->twig->addGlobal('latest_toran_version', $version);

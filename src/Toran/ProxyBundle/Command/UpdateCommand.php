@@ -18,7 +18,9 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Composer\Util\Filesystem;
 use Composer\Util\ProcessExecutor;
 use Composer\Util\ErrorHandler;
+use Composer\Util\RemoteFilesystem;
 use Composer\IO\ConsoleIO;
+use Composer\Factory;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 
@@ -38,9 +40,14 @@ class UpdateCommand extends ContainerAwareCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $baseDir = strtr(realpath($this->getContainer()->getParameter('kernel.root_dir').'/../'), '\\', '/');
+        $io = new ConsoleIO($input, $output, $this->getHelperSet());
+        $composerConfig = Factory::createConfig();
+        $io->loadConfiguration($composerConfig);
 
-        $newVersion = file_get_contents('https://toranproxy.com/version');
+        $baseDir = strtr(realpath($this->getContainer()->getParameter('kernel.root_dir').'/../'), '\\', '/');
+        $rfs = new RemoteFilesystem($io, $composerConfig);
+
+        $newVersion = $rfs->getContents('toranproxy.com', 'https://toranproxy.com/version', false);
         $currentVersion = $this->getContainer()->getParameter('toran_version');
 
         if ($currentVersion === $newVersion) {
@@ -50,7 +57,7 @@ class UpdateCommand extends ContainerAwareCommand
 
         if (!is_writable($baseDir) || !is_writable($baseDir.'/src')) {
             $perms = fileperms($baseDir);
-            if (true !== chmod($baseDir, $perms & 0777 | 0700)) {
+            if (true !== @chmod($baseDir, $perms & 0777 | 0700)) {
                 $output->getErrorOutput()->writeln('<error>The auto-updater needs to be run with the user owning '.$baseDir.' or that directory should at least be writable by the current user</error>');
                 return 1;
             }
@@ -60,7 +67,6 @@ class UpdateCommand extends ContainerAwareCommand
         set_time_limit(0);
         ErrorHandler::register();
 
-        $io = new ConsoleIO($input, $output, $this->getHelperSet());
         $exec = new ProcessExecutor($io);
         $fs = new Filesystem($exec);
 
@@ -69,7 +75,7 @@ class UpdateCommand extends ContainerAwareCommand
         $this->acquirePerms($baseDir);
         mkdir($baseUpdateDir);
         $output->writeln('Downloading new version: '.$newVersion);
-        copy('https://toranproxy.com/releases/toran-proxy-v'.$newVersion.'.tgz', $baseUpdateDir.'/new.tgz');
+        $rfs->copy('toranproxy.com', 'https://toranproxy.com/releases/toran-proxy-v'.$newVersion.'.tgz', $baseUpdateDir.'/new.tgz', false);
         $output->writeln('Decompressing...');
         if (0 !== $exec->execute('tar --strip-components=1 -zxf new.tgz', $ignoredOutput, $baseUpdateDir)) {
             $output->getErrorOutput()->writeln('<error>Could not untar the new release: '.$exec->getErrorOutput());
@@ -195,7 +201,7 @@ class UpdateCommand extends ContainerAwareCommand
     {
         if (!isset($this->perms[$path]) && file_exists($path) && !is_writable($path)) {
             $perms = fileperms($path);
-            if (!chmod($path, $perms & 0777 | 0700)) {
+            if (!@chmod($path, $perms & 0777 | 0700)) {
                 throw new \RuntimeException('Could not change permissions of '.$path);
             }
             if ($store) {
@@ -213,7 +219,7 @@ class UpdateCommand extends ContainerAwareCommand
         clearstatcache();
         foreach ($this->perms as $path => $perms) {
             if (file_exists($path)) {
-                chmod($path, $perms);
+                @chmod($path, $perms);
             }
         }
     }

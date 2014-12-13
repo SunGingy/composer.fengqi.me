@@ -40,6 +40,7 @@
             <footer>
                 <div class="content-area">
                     <a href="https://toranproxy.com">Toran Proxy</a> v{{ toran_version }} {% if toran_version < latest_toran_version %}(<a href="{{ path('docs', {page: 'usage.md'}) }}#updates" class="update-hint">New version available!</a>) {% endif %}- <a href="mailto:toran@nelm.io">Feedback</a>
+                    <a href="{{ path('toran_proxy_packagist_index') }}">Packagist</a>
                 </div>
             </footer>
         {% endblock %}
