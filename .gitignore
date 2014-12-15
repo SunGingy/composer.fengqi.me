@@ -11,3 +11,4 @@
 /composer.phar
 /app/toran
 /web/repo/
+composer.lock
