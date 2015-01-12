@@ -1,3 +1,8 @@
+### 1.1.6 (2015-01-07)
+
+  * Fixed private package update hook to work with GitHub Enterprise
+  * Fixed private package support for creating zip files for feature branches
+
 ### 1.1.5 (2014-12-11)
 
   * Fixed issues with http proxy handling

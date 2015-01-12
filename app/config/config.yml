@@ -10,6 +10,8 @@ framework:
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
         strict_requirements: ~
+        http_port: %toran_http_port%
+        https_port: %toran_https_port%
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
@@ -36,6 +38,4 @@ parameters:
     router.request_context.host: %toran_host%
     router.request_context.scheme: %toran_scheme%
     router.request_context.base_url: %toran_base_url%
-    request_listener.http_port: %toran_http_port%
-    request_listener.https_port: %toran_https_port%
-    toran_version: 1.1.5
+    toran_version: 1.1.6

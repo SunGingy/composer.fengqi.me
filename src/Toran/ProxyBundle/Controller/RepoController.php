@@ -23,6 +23,9 @@ use Symfony\Component\Form\FormError;
 
 class RepoController extends Controller
 {
+    const GITHUB_URL_RE = '{^(?:https?://|git://|ssh://)?(?:[a-zA-Z0-9_\-]+@)?(?P<host>[a-z0-9.-]+)(?::(?:\d+/)?|/)(?P<path>[\w.\-/]+?)(?:\.git|/)?$}';
+    const BITBUCKET_URL_RE = '{^(?:https?://|git://|git@)?(?P<host>bitbucket\.org)[/:](?P<path>[\w.-]+/[\w.-]+?)(\.git)?/?$}i';
+
     /*public function indexAction()
     {
         return $this->render('ToranProxyBundle:Repo:index.html.twig', array(
@@ -94,10 +97,10 @@ class RepoController extends Controller
         }
 
         if (isset($payload['repository']['url'])) { // github/gitlab/anything hook
-            $urlRegex = '{^(?:https?://|git://|ssh://)?(?P<host>(?:[a-zA-Z0-9_\-]+@)?[a-z0-9.-]+)(?::\d*|/)(?P<path>[\w.\-/]+)(?:\.git|/)?$}';
+            $urlRegex = self::GITHUB_URL_RE;
             $url = $payload['repository']['url'];
         } elseif (isset($payload['canon_url']) && isset($payload['repository']['absolute_url'])) { // bitbucket hook
-            $urlRegex = '{^(?:https?://|git://|git@)?(?P<host>bitbucket\.org)[/:](?P<path>[\w.-]+/[\w.-]+?)(\.git)?/?$}i';
+            $urlRegex = self::BITBUCKET_URL_RE;
             $url = $payload['canon_url'].$payload['repository']['absolute_url'];
         } else {
             return new JsonResponse(array('status' => 'error', 'message' => 'Missing or invalid payload'), 406);
