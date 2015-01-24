@@ -3,6 +3,8 @@
 /app/cache/*
 /app/config/parameters.yml
 /app/logs/*
+/app/toran/*
+!app/toran/config.yml 
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /build/
