@@ -1,7 +1,7 @@
 {% extends '::layout.html.twig' %}
 
 {% block content %}
-    <h2>有两种方式使用本镜像服务.</h2>
+    <h2>有两种方式测试本镜像服务.</h2>
 
     <h2>第一种(建议), 修改 composer 的全局配置文件.</h2>
     <p>进入 composer 的主目录(一般在家目录 ~/.composer 下, 可通过命令 composer config -l -g|grep home 查看), 打开 config.json 文件(没有就创建一个), 修改如下: </p>
@@ -24,4 +24,9 @@
         {"packagist": false}
     ]
 }</pre>
+
+    <h6>本站测试镜像代理仅作为测试使用, 不保证长期有效, 若版权所有者认为属侵权请联系我:
+    <a href="mailto:lyf362345@gmail.com">删除代码</a></h6>
+    <h6>Acting only as a test site to test the use of a mirror, does not guarantee long-term effective, if the copyright holder considers an infringement of copyright, please contact me:
+    <a href="mailto:lyf362345@gmail.com">to remove the code</a></h6>
 {% endblock %}

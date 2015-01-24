@@ -3,7 +3,6 @@
 {% block content %}
     <h2>
         Packagist Proxy
-        <span class="docs-hint"><a href="{{ path('docs', {page: 'usage.md'}) }}#packagist"></a></span>
     </h2>
     {% if not is_enabled %}
         <p>Packagist proxying is disabled, you can <a href="{{ path('settings') }}">enable it in the settings</a></p>
