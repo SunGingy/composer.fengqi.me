@@ -1,0 +1,8 @@
+repositories: {  }
+packagist_packages: {  }
+packagist_sync: proxy
+dist_sync_mode: lazy
+git_prefix: false
+git_path: false
+license: null
+license_personal: true
