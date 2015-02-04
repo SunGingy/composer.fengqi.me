@@ -1,7 +1,7 @@
 repositories: {  }
 packagist_packages:
-    - barryvdh/laravel-ide-helper
-    - james-heinrich/getid3
+    - vlucas/phpdotenv
+    - symfony/var-dumper
     - symfony/translation
     - symfony/security-core
     - symfony/routing
@@ -12,74 +12,13 @@ packagist_packages:
     - symfony/event-dispatcher
     - symfony/http-kernel
     - symfony/finder
-    - symfony/dom-crawler
-    - symfony/css-selector
     - symfony/console
-    - symfony/browser-kit
     - swiftmailer/swiftmailer
-    - stack/builder
-    - predis/predis
-    - phpseclib/phpseclib
-    - patchwork/utf8
-    - nesbot/carbon
-    - monolog/monolog
+    - jakub-onderka/php-console-color
+    - jakub-onderka/php-console-highlighter
+    - dnoegel/php-xdg-base-dir
     - nikic/php-parser
-    - jeremeamia/superclosure
-    - filp/whoops
-    - ircmaxell/password-compat
-    - d11wtq/boris
-    - symfony/filesystem
-    - classpreloader/classpreloader
-    - laravel/framework
-    - phpdocumentor/reflection-docblock
-    - symfony/class-loader
-    - illuminate/console
-    - illuminate/filesystem
-    - illuminate/support
-    - dflydev/markdown
-    - doctrine/lexer
-    - doctrine/annotations
-    - doctrine/collections
-    - doctrine/cache
-    - doctrine/inflector
-    - doctrine/common
-    - doctrine/dbal
-    - intervention/image
-    - mobiledetect/mobiledetectlib
-    - jenssegers/agent
-    - tijsverkoyen/css-to-inline-styles
-    - phpoffice/phpexcel
-    - illuminate/cache
-    - illuminate/config
-    - illuminate/http
-    - illuminate/routing
-    - illuminate/view
-    - maatwebsite/excel
-    - illuminate/database
-    - illuminate/encryption
-    - illuminate/redis
-    - illuminate/session
-    - illuminate/container
-    - illuminate/events
-    - illuminate/cookie
-    - symfony/security
-    - laravel/laravel
-    - illuminate/auth
-    - illuminate/exception
-    - illuminate/foundation
-    - illuminate/hashing
-    - illuminate/html
-    - illuminate/log
-    - illuminate/mail
-    - illuminate/pagination
-    - illuminate/queue
-    - illuminate/remote
-    - illuminate/translation
-    - illuminate/validation
-    - illuminate/workbench
-    - symfony/security-acl
-    - symfony/security-csrf
-    - symfony/security-http
+    - psy/psysh
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
