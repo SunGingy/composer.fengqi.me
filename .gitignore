@@ -1,11 +1,11 @@
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
-/app/config/parameters.yml
 /app/logs/*
 /app/toran/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+!app/toran/.gitkeep
 /build/
 /vendor/
 /bin/
