@@ -3,7 +3,7 @@ parameters:
     secret:         vFjPLDTPJTGcB2dJvFjPLDTPJTGcB2dJ
 
     # http or https depending on your hosting setup
-    toran_scheme:   http
+    toran_scheme:   https
 
     # in case you use non-standard ports you can update them here
     toran_http_port: 80
