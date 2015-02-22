@@ -114,6 +114,34 @@ packagist_packages:
     - symfony/security-acl
     - symfony/security-csrf
     - symfony/security-http
+    - october/october
+    - october/system
+    - october/backend
+    - october/cms
+    - october/rain
+    - composer/installers
+    - erusev/parsedown-extra
+    - kriswallsmith/assetic
+    - linkorb/jsmin-php
+    - oyejorge/less.php
+    - twig/twig
+    - guzzlehttp/guzzle
+    - league/csv
+    - erusev/parsedown
+    - guzzlehttp/streams
+    - october/auth
+    - october/config
+    - october/cron
+    - october/database
+    - october/extension
+    - october/filesystem
+    - october/html
+    - october/mail
+    - october/network
+    - october/router
+    - october/support
+    - october/syntax
+    - october/translation
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
