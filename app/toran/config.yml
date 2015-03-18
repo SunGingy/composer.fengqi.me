@@ -142,6 +142,7 @@ packagist_packages:
     - october/support
     - october/syntax
     - october/translation
+    - laravel/installer
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
