@@ -143,6 +143,21 @@ packagist_packages:
     - october/syntax
     - october/translation
     - laravel/installer
+    - cartalyst/sentry
+    - fzaninotto/faker
+    - lucadegasperi/oauth2-server-laravel
+    - league/oauth2-server
+    - league/event
+    - barryvdh/laravel-cors
+    - asm89/stack-cors
+    - barryvdh/laravel-debugbar
+    - maximebf/debugbar
+    - zizaco/confide
+    - zizaco/entrust
+    - laravelbook/ardent
+    - frozennode/administrator
+    - ckeditor/ckeditor
+    - way/generators
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
