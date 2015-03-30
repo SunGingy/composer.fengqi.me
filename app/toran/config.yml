@@ -158,6 +158,19 @@ packagist_packages:
     - frozennode/administrator
     - ckeditor/ckeditor
     - way/generators
+    - yiisoft/yii2-app-basic
+    - yiisoft/yii2
+    - yiisoft/yii2-bootstrap
+    - yiisoft/yii2-swiftmailer
+    - yiisoft/yii2-composer
+    - ezyang/htmlpurifier
+    - cebe/markdown
+    - yiisoft/yii2-codeception
+    - yiisoft/yii2-debug
+    - yiisoft/yii2-gii
+    - yiisoft/yii2-faker
+    - fxp/composer-asset-plugin
+    - phalcon/devtools
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
