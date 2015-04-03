@@ -171,6 +171,33 @@ packagist_packages:
     - yiisoft/yii2-faker
     - fxp/composer-asset-plugin
     - phalcon/devtools
+    - sonata-project/core-bundle
+    - raulfraile/ladybug-bundle
+    - jms/security-extra-bundle
+    - jms/translation-bundle
+    - nelmio/cors-bundle
+    - dwd/qiniu-sdk-bundle
+    - sonata-project/doctrine-orm-admin-bundle
+    - jms/serializer-bundle
+    - sonata-project/admin-bundle
+    - zhuzhichao/ip-location-zh
+    - raulfraile/ladybug-installer
+    - jdorn/sql-formatter
+    - symfony/doctrine-bridge
+    - symfony/framework-bundle
+    - doctrine/doctrine-bundle
+    - symfony/config
+    - symfony/stopwatch
+    - symfony/dependency-injection
+    - symfony/templating
+    - doctrine/data-fixtures
+    - doctrine/doctrine-fixtures-bundle
+    - cocur/slugify
+    - symfony/form
+    - symfony/intl
+    - symfony/options-resolver
+    - celc/ciunit
+    - mustangostang/spyc
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
