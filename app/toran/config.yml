@@ -227,6 +227,10 @@ packagist_packages:
     - mikecao/flight
     - phpoption/phpoption
     - jms/parser-lib
+    - leaps/httpclient
+    - leaps/events
+    - leaps/filesystem
+    - leaps/framework
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
