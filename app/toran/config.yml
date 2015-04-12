@@ -231,6 +231,7 @@ packagist_packages:
     - leaps/events
     - leaps/filesystem
     - leaps/framework
+    - vlucas/valitron
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
