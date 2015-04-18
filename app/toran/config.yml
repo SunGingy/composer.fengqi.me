@@ -232,6 +232,10 @@ packagist_packages:
     - leaps/filesystem
     - leaps/framework
     - vlucas/valitron
+    - yiisoft/jquery
+    - michelf/php-markdown
+    - yiisoft/jquery-pjax
+    - twbs/bootstrap
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
