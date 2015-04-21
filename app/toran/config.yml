@@ -236,6 +236,63 @@ packagist_packages:
     - michelf/php-markdown
     - yiisoft/jquery-pjax
     - twbs/bootstrap
+    - symfony/symfony
+    - doctrine/orm
+    - twig/extensions
+    - symfony/assetic-bundle
+    - symfony/swiftmailer-bundle
+    - symfony/monolog-bundle
+    - sensio/distribution-bundle
+    - sensio/framework-extra-bundle
+    - sensio/generator-bundle
+    - incenteev/composer-parameter-handler
+    - nelmio/api-doc-bundle
+    - misd/guzzle-bundle
+    - iknowapp/baidu-push-sdk
+    - symfony/framework-standard-edition
+    - symfony/icu
+    - symfony/swiftmailer-bridge
+    - symfony/monolog-bridge
+    - symfony/twig-bundle
+    - jms/serializer
+    - symfony/security-bundle
+    - jms/metadata
+    - jms/aop-bundle
+    - jms/di-extra-bundle
+    - guzzle/guzzle
+    - symfony/twig-bridge
+    - phpcollection/phpcollection
+    - jms/cg
+    - symfony/locale
+    - symfony/propel1-bridge
+    - symfony/property-access
+    - symfony/proxy-manager-bridge
+    - symfony/serializer
+    - symfony/validator
+    - symfony/web-profiler-bundle
+    - symfony/expression-language
+    - guzzle/batch
+    - guzzle/cache
+    - guzzle/common
+    - guzzle/http
+    - guzzle/inflection
+    - guzzle/iterator
+    - guzzle/log
+    - guzzle/parser
+    - guzzle/plugin
+    - guzzle/plugin-async
+    - guzzle/plugin-backoff
+    - guzzle/plugin-cache
+    - guzzle/plugin-cookie
+    - guzzle/plugin-curlauth
+    - guzzle/plugin-history
+    - guzzle/plugin-log
+    - guzzle/plugin-mock
+    - guzzle/plugin-oauth
+    - guzzle/service
+    - guzzle/stream
+    - guzzle/plugin-md5
+    - guzzle/plugin-error-response
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
