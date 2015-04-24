@@ -293,6 +293,26 @@ packagist_packages:
     - guzzle/stream
     - guzzle/plugin-md5
     - guzzle/plugin-error-response
+    - pimple/pimple
+    - saxulum/saxulum-assetic-twig-provider
+    - silex/silex
+    - kilte/silex-captcha
+    - silex/web-profiler
+    - mrclay/minify
+    - gregwar/captcha
+    - silex/api
+    - silex/providers
+    - composer/satis
+    - composer/composer
+    - justinrainbow/json-schema
+    - seld/jsonlint
+    - saxulum/saxulum-console
+    - firephp/firephp-core
+    - tubalmartin/cssmin
+    - doctrine/doctrine-cache-bundle
+    - sorien/silex-dbal-profiler
+    - tymon/jwt-auth
+    - namshi/jose
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
