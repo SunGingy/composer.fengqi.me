@@ -313,6 +313,8 @@ packagist_packages:
     - sorien/silex-dbal-profiler
     - tymon/jwt-auth
     - namshi/jose
+    - dflydev/doctrine-orm-service-provider
+    - affinitidev/silex-config
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false

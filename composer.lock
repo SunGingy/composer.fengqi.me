@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "ea037305499d300f3a534b36a62abcdd1ba3479d"
+                "reference": "1cb427ff5c0b977468643a39436f3b0a356fc8eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/ea037305499d300f3a534b36a62abcdd1ba3479d",
-                "reference": "ea037305499d300f3a534b36a62abcdd1ba3479d",
+                "url": "https://api.github.com/repos/composer/composer/zipball/1cb427ff5c0b977468643a39436f3b0a356fc8eb",
+                "reference": "1cb427ff5c0b977468643a39436f3b0a356fc8eb",
                 "shasum": ""
             },
             "require": {
@@ -72,7 +72,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2015-04-24 10:08:11"
+            "time": "2015-04-26 21:18:04"
         },
         {
             "name": "doctrine/annotations",
