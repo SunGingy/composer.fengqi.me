@@ -315,6 +315,7 @@ packagist_packages:
     - namshi/jose
     - dflydev/doctrine-orm-service-provider
     - affinitidev/silex-config
+    - sami/sami
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
