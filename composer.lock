@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "42a9561ae23b236da1d5a4acf50f7ea96ebe68aa"
+                "reference": "6c63fe9f22779a36f672c3f831c1450bf0a3a143"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/42a9561ae23b236da1d5a4acf50f7ea96ebe68aa",
-                "reference": "42a9561ae23b236da1d5a4acf50f7ea96ebe68aa",
+                "url": "https://api.github.com/repos/composer/composer/zipball/6c63fe9f22779a36f672c3f831c1450bf0a3a143",
+                "reference": "6c63fe9f22779a36f672c3f831c1450bf0a3a143",
                 "shasum": ""
             },
             "require": {
@@ -69,13 +69,13 @@
                 }
             ],
             "description": "Composer helps you declare, manage and install dependencies of PHP projects, ensuring you have the right stack everywhere.",
-            "homepage": "http://getcomposer.org/",
+            "homepage": "https://getcomposer.org/",
             "keywords": [
                 "autoload",
                 "dependency",
                 "package"
             ],
-            "time": "2015-05-02 23:10:29"
+            "time": "2015-05-06 13:24:06"
         },
         {
             "name": "doctrine/annotations",
