@@ -84,7 +84,7 @@ class Configuration
         switch ($key) {
             case 'git_prefix':
                 // make sure it ends with a path delimiter (also : to allow prefixes like git@foo.bar:)
-                if (!preg_match('{[\\/:]$}', $res)) {
+                if ($res && !preg_match('{[\\/:]$}', $res)) {
                     $res .= '/';
                 }
                 break;

@@ -1,3 +1,8 @@
+### 1.1.7 (2015-05-07)
+
+  * Fixed git cloning issue with some packages
+  * Fixed support for ^ operator
+
 ### 1.1.6 (2015-01-07)
 
   * Fixed private package update hook to work with GitHub Enterprise

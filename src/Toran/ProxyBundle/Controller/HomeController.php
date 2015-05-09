@@ -212,11 +212,11 @@ class HomeController extends Controller
             ->add('git_path', 'text', array(
                 'required' => false,
                 'label' => 'git path (where to store git clones on this machine, must be writable by the web user)',
-                'attr' => array('placeholder' => '/home/git/mirrors/'),
+                'attr' => array('placeholder' => '/home/git/path/to/mirrors/'),
             ))
             ->add('git_prefix', 'text', array(
                 'required' => false,
-                'label' => 'git prefix URL (how composer can remotely access the path above)',
+                'label' => 'git clone url (so composer can clone your repositories, e.g. git@your.toran.proxy:path/to/mirrors/)',
                 'attr' => array('placeholder' => 'git@' . $req->server->get('HOST') . ':mirrors/'),
             ))
             ->add('license_personal', 'checkbox', array(

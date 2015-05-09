@@ -41,8 +41,11 @@ class SourceSyncer
     {
         set_time_limit(0);
         foreach ($packages as $package) {
-            if ($package instanceof AliasPackage || $package->getType() === 'metapackage') {
+            if ($package->getType() === 'metapackage') {
                 continue;
+            }
+            if ($package instanceof AliasPackage) {
+                $package = $package->getAliasOf();
             }
             $this->syncPackageSource($io, $composerConfig, $package);
         }
