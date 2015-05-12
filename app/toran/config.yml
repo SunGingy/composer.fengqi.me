@@ -354,6 +354,9 @@ packagist_packages:
     - doctrine/doctrine-orm-module
     - radnan/rdn-csv
     - warrence/yii2-kartikgii
+    - jildertmiedema/laravel-plupload
+    - guzzlehttp/ringphp
+    - react/promise
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
