@@ -357,6 +357,37 @@ packagist_packages:
     - jildertmiedema/laravel-plupload
     - guzzlehttp/ringphp
     - react/promise
+    - zendframework/zend-version
+    - zendframework/zend-debug
+    - zendframework/zenddiagnostics
+    - zendframework/zend-file
+    - zendframework/skeleton-application
+    - ocramius/ocracomposer
+    - ocramius/ocracomposerinstaller
+    - oro/doctrine-extensions
+    - zendframework/zend-barcode
+    - zendframework/zend-captcha
+    - zendframework/zend-crypt
+    - zendframework/zend-db
+    - zendframework/zend-dom
+    - zendframework/zend-feed
+    - zendframework/zend-ldap
+    - zendframework/zend-log
+    - zendframework/zend-mail
+    - zendframework/zend-memory
+    - zendframework/zend-mime
+    - zendframework/zend-navigation
+    - zendframework/zend-permissions-rbac
+    - zendframework/zend-progressbar
+    - zendframework/zend-resources
+    - zendframework/zend-server
+    - zendframework/zend-session
+    - zendframework/zend-soap
+    - zendframework/zend-tag
+    - zendframework/zend-test
+    - zendframework/zend-xmlrpc
+    - zendframework/zend-acl
+    - zendframework/zend-markup
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
