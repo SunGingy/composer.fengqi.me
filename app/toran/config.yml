@@ -388,6 +388,13 @@ packagist_packages:
     - zendframework/zend-xmlrpc
     - zendframework/zend-acl
     - zendframework/zend-markup
+    - friendsofsymfony/user-bundle
+    - qiniu/php-sdk
+    - maxhoffmann/parsedown-laravel
+    - ikimea/browser
+    - tecnick.com/tcpdf
+    - jasig/phpcas
+    - os/php-excel
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
