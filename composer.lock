@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "bc45d9185513575434021527d7756420e9f4b2cf"
+                "reference": "69210d5bc130f8cc9f96f99582a041254d7b9833"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/bc45d9185513575434021527d7756420e9f4b2cf",
-                "reference": "bc45d9185513575434021527d7756420e9f4b2cf",
+                "url": "https://api.github.com/repos/composer/composer/zipball/69210d5bc130f8cc9f96f99582a041254d7b9833",
+                "reference": "69210d5bc130f8cc9f96f99582a041254d7b9833",
                 "shasum": ""
             },
             "require": {
@@ -75,7 +75,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2015-05-11 14:49:39"
+            "time": "2015-05-25 13:29:26"
         },
         {
             "name": "doctrine/annotations",
@@ -985,16 +985,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e"
+                "reference": "7ae1934082d9ac299303b146e4a999274a723e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0449d0e1178bc8e934520b20432d1705c3b25e7e",
-                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7ae1934082d9ac299303b146e4a999274a723e94",
+                "reference": "7ae1934082d9ac299303b146e4a999274a723e94",
                 "shasum": ""
             },
             "require": {
@@ -1085,20 +1085,20 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "The Symfony PHP framework",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-11 01:58:49"
+            "time": "2015-05-27 00:17:10"
         },
         {
             "name": "twig/extensions",

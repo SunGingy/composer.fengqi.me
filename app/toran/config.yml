@@ -395,6 +395,14 @@ packagist_packages:
     - tecnick.com/tcpdf
     - jasig/phpcas
     - os/php-excel
+    - zendframework/zendservice-apple-apns
+    - rmccue/requests
+    - yiisoft/yii2-jui
+    - fengqi/hanzi
+    - sabre/event
+    - sabre/http
+    - sabre/vobject
+    - sabre/dav
 packagist_sync: proxy
 dist_sync_mode: lazy
 git_prefix: false
